@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: monospace, sans-serif;
 }
 
 
@@ -97,4 +98,47 @@ body{
 text-align: right;
 /* border-right: 0.5vh solid var(--foreground-color); */
 padding-right: 3.9vh;
+}
+
+
+
+
+
+
+
+.pc {
+  display: none;
+  width: 100%;
+}
+.phn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+    height: 100VH;
+}
+
+.phn img{
+    width: 50%;
+    max-width: 300px;
+    padding-bottom: 40px;
+}
+.phn h1{
+    background-color: bisque;
+    color: black;
+    padding: 5px 10px;
+    width:80% ;
+    min-width: 300px;
+    border-radius: 7px;
+}
+
+@media (min-width: 1000px) {
+  .phn {
+    display: none;
+  }
+
+  .pc {
+    display: block;
+  }
 }
