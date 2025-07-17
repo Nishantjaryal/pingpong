@@ -4,8 +4,8 @@ const ComputerScoreEle = document.getElementById("comp_scr")
 
 
 
-const INIT_VELOCITY = .03;
-const ACC_RATE  = 0.00000000001;
+const INIT_VELOCITY = .1;
+const ACC_RATE  = 0.0000001;
 
 export default class Ball{
     constructor(elem){

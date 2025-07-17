@@ -6,8 +6,8 @@
 
 
 :root{
-    --hue:200;
-    --saturation: 50%;
+    --hue:490;
+    --saturation: 60%;
     --foreground-color: hsl(var(--hue),var(--saturation), 75%); 
     --background-color: hsl(var(--hue),var(--saturation), 20%); 
 }
@@ -15,15 +15,26 @@
 body{
     margin:0;
     background-color: var(--background-color);
+    background-position: center;
+    background-size: contain;
     position: relative;
     overflow: hidden;
+}
+
+.line{
+    position: absolute;
+    left: 50%;
+    width: 0px;
+    border-left: 5px solid white;
+    height: 100vh;
+    top: 0;
 }
 
 .paddle{
     --position: 50;
     position: absolute;
-    background: var(--foreground-color);
-    width: 1vh;
+    /* background: var(--foreground-color); */
+    width: 50px;
     height: 10vh;
     top:calc(var(--position)* 1vh);
     transform: translateY(-50%);
@@ -31,11 +42,18 @@ body{
 
 .paddle.left{
     left: 1vh;
+    background-color: red;
+    background-image: url("./images/tred.png");
+    border-radius:10px 50% 50% 10px;
+    
 }
 .paddle.right{
     right: 1vh;
     transition: all ease 0.1s;  
+ background-color: red;
+     background-image: url("./images/tred.png");
 
+    border-radius:50% 10px 10px 50% ;
     /* with just a change with in the transition time we can alter the accuracy, eventually which helps to define the modes/levels to us*/
 
 }
@@ -44,7 +62,8 @@ body{
     --x: 50;
     --y: 50;
     position: absolute;
-    background: var(--foreground-color);
+    background: white;
+    background-image: url("./images/twhite.png");
     width: 3vh;
     height: 3vh;
     border-radius: 50%;
@@ -61,6 +80,7 @@ body{
     color: var(--foreground-color);
     font-size: 7vh;
     opacity: 0.5;
+    
 
 }
 
@@ -69,11 +89,12 @@ body{
     flex-basis: 0;
     padding: 0 1vh;
     margin: 0;
+    
 }
 
 
 .score>:first-child{
 text-align: right;
-border-right: 0.5vh solid var(--foreground-color);
+/* border-right: 0.5vh solid var(--foreground-color); */
 padding-right: 3.9vh;
 }
